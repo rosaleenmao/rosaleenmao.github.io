@@ -1,94 +1,333 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
+
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-</head>
-<style>
-    .responsive {
-        width: 90%;
-        height: auto;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+  <title>Sheriff Nehls for Congress | One Tough Sheriff | nehlsforcongress.com</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" type="text/css" rel="stylesheet" />
+
+  <style>
+    /*
+      red: #db1727
+      blue: #090828
+    */
+    body {
+      font-family: arial;
     }
 
-    ul {
-        display: table;
+    p {
+      color: #333333;
+      font-size: 18px;
+    }
+
+    section.image {
+      height: 436px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: none;
+      position: relative;
+    }
+
+    section.image p,
+    section.image h1,
+    section.image h2 {
+      color: white;
+      font-weight: bold;
+    }
+    
+    .about h1 {
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .about h2 {
+      text-align: center;
+      font-size: 20px;
+    }
+
+    section.image h1 {
+      text-align: center;
+      font-size: 30px;
+    }
+
+    section.image h2 {
+      text-align: center;
+      font-size: 20px;
+    }
+
+    section.image .text {
+      width: 60%;
+      margin: 0 auto;
+      top: 50%;
+      position: relative;
+      transform: translateY(-50%);
+      z-index: 100;
+    }
+
+    section.image .overlay {
+      background: rgba(16, 31, 70, 0.7);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 50;
+    }
+
+    a.donate-button {
+      color: white;
+      border: 2px solid white;
+      padding: 10px 30px;
+      font-weight: bold;
+    }
+
+    .get-involved {
+      width: 100%;
+      background-color: #090828;
+      overflow: auto;
+    }
+
+    .get-involved a {
+      float: left;
+      padding: 12px;
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      width: 25%;
+      text-align: center;
+    }
+
+    .get-involved a:hover {
+      background-color: #000;
+    }
+
+    .get-involved a.active {
+      background-color: #db1727;
+    }
+
+    .get-involved a.active:hover {
+      background-color: #8b0000;
+    }
+
+    @media screen and (max-width: 500px) {
+      .get-involved a {
+        float: none;
+        display: block;
         width: 100%;
-        margin: 0 0;
-        -webkit-padding-start: 0px;
-        /* reset chrome default */
-
-        position: -webkit-sticky;
-        /* Safari */
-        position: sticky;
-        top: 0;
+        text-align: left;
+      }
     }
 
-    ul li {
-        display: table-cell;
-        height: 10px;
-        line-height: 10px;
-        font-size: 12px;
-        padding: 5px 10px;
-        text-align: center;
-        background-color: #99ccff;
-        border-right: 2px solid #fff;
+    .photo {
+      position: relative;
+      text-align: center;
+      color: white;
+      -webkit-text-stroke: 1px black;
+      font-weight: 900;
+      font-size: 40px;
     }
 
-    ul li:first-child {
-        border-radius: 10px 0 0 10px;
+    .bottom {
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
-    ul li:last-child {
-        border-radius: 0 10px 10px 0;
-        border-right: 0 none;
+    nav {
+      /* position: -webkit-sticky; */
+      /* Safari */
+      /* position: absolute;
+      top: 0; */
+      background-color: #090828;
+      z-index: 99999;
+      width: 100%;
+      background-color: #090828;
+      overflow: auto;
     }
 
-    li a {
-        display: block;
-        padding: 8px;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        font-family: 'Nunito', sans-serif;
-        font-size: 20px;
+    input {
+      padding: 10px;
+ height: 30px;
+      border-color: #090828;
     }
 
-    li a:hover {
-        background-color: #3399ff;
+    nav a {
+      color:white;
+      font-weight: 100;
+      margin-top: 45px;
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      text-align: center;
+      float:left;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    h1 {
-        font-family: 'Nunito', sans-serif;
-        text-align: center;
-        font-size: 30px;
+    .short {
+      width: 5%;
     }
-</style>
-<title>Rosaleen Xiong</title>
-<link rel="icon" href="assets/favicon.png">
-<body style="background-color: #f2ffff;">
-<img id="home" src="assets/banner.png"
-    alt="hey y'all, I'm Rosaleen Xiong and I'm interested in too many things for my own good." class="responsive"></img>
-<ul>
-    <li></li>
-    <li><a href="#home">home</a></li>
-    <li><a href="#news">news</a></li>
-    <li><a href="#contact">stuff</a></li>
-    <li><a href="#about">cool</a></li>
-    <li></li>
-</ul>
-<section id="news">
+
+
+    .long {
+      width: 9%;
+    }
+
+    nav a:hover {
+      color:#db1727
+    }
+
+    #popup {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+
+    }
+
+    #popup div{
+      visibility: hidden;
+      width: 175%;
+      background-color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      color: #333333;
+
+      /* Position the tooltip */
+      left: -37.5%;
+      position: absolute;
+      z-index: 1;
+      bottom: calc(100% + 10px);
+      box-shadow: 0px 0px 5px 1px #dcdcdc;
+    }
+
+  </style>
+</head>
+
+<link rel="shortcut icon" href="assets/favicon.jpg">
+
+<body>
+  <nav>
+    <img src="assets/Troy logo.webp" style="padding: 10px; margin-left:240px; margin-right: 100px;float:left;"/>
+    <a class = "short">Home</a>
+    <a class = "short">Events</a>
+    <a class = "long">Endorsements</a>
+    <a class = "long">News</a>
+    <a href = "" style = "padding:10px;margin-top:25px;margin-left:240px;background-color:white;color:#090828"><b>Shop</b></a>
+    <a href = "" style = "padding:10px 30px 10px 30px;margin-top:25px;margin-left:20px;background-color:#db1727;color:white"><b>Donate</b></a>
+  </nav>
+
+  <!-- include shop and donate -->
+
+  <div class="photo">
+    <img src="assets/cover.jpg" style = "width:100%">
+    <div class="bottom">Over 30 years of destroying evidence, ignoring the issues of Fort Bend, and underpaying my staff</div>
+  </div>
+
+  <form style="margin: auto;width:50%;">
+    <input id="fname" name="fname" placeholder="First Name">
+    <input id="zip" name="zip" placeholder="Zip">
+    <input id="email" name="email" placeholder="Email">
+    <div href = "#" id = "popup"  style="background-color: #090828;color:white;padding:5px;">
+      Sign up for updates!
+      <div id = "popup-text">
+        Wait! Are you sure you want to sign up for updates from Fired Cop Troy Nehls? He has a history of failing Fort Bend’s families! Check out <a href = "https://sri2020.com/">Sri Preston Kulkarni</a> instead.
+      </div>
+    </div>
+  </form>
+  <br>
+
+  <div class="get-involved">
+    <a class="active" href="https://secure.actblue.com/donate/sri-site?refcode=website_topmenudonatebutton"> <img src="assets/donate.webp" /><br>Donate</a>
+    <a href="https://sri2020.com/action/"> <img src="assets/volunteer.webp" /><br>Volunteer</a>
+    <a href="https://www.facebook.com/SriforCongress/"> <img src="assets/facebook.webp" /><br>Like Sheriff Nehls</a>
+    <a href="https://twitter.com/SriPKulkarni"> <img src="assets/twitter.webp" /><br>Follow Sheriff Nehls</a>
+  </div>
+
+  <!-- done -->
+  <div id="about" class="about" style="margin: 0 auto; width: 80%">
     <br>
-    <h1>News</hi>
-        <img src="assets/banner.png" alt="blah" class="responsive"></img>
-        <img src="assets/banner.png" alt="blah" class="responsive"></img>
-        <img src="assets/banner.png" alt="blah" class="responsive"></img>
-</section>
-<section id="contact">
-    <br>
-    <h1>Contact</hi>
-        <img src="assets/banner.png" alt="blah" class="responsive"></img>
-        <img src="assets/banner.png" alt="blah" class="responsive"></img>
-        <img src="assets/banner.png" alt="blah" class="responsive"></img>
-</section>
+    <h1>THE ISSUES I PRETEND TO CARE ABOUT</h1>
+      <br>
+      <h2>COVID-19</h2>
+      <p>I’ve called mask mandates—which are expected to save an estimated 70,000 American lives—“unnecessary, unconstitutional and un-American.” To justify my anti-mask beliefs, I falsely claimed back in April that we’ve “seen the worst” of this virus, two months before Texas saw 10,000 new cases each day. </p>
+      <br>
+      <p>I bragged that I had “<a href = "https://www.facebook.com/story.php?story_fbid=2538726669713415&id=1431647400421353">not a single positive test. NOT ONE</a>” in my Fort Bend County jail. Now, <a href = "https://www.fbherald.com/news/1-county-inmate-6-jails-have-virus/article_afd9110c-b701-11ea-b239-6f4d0dcc3a46.html">COVID-19 has infected at least six Fort Bend County jail staff and at least one inmate</a>. My department was “<a href = "https://fbindependent.com/fort-bend-countys-mask-order-may-be-a-paper-tiger-after-all-p14170-1.htm">not actively</a>” enforcing Fort Bend County’s mask order.</p>
+      <br>
+      <h2>Human Trafficking</h2>
+      <p>I have a strong record of <a href = "https://www.chron.com/neighborhood/katy/news/article/Fort-Bend-County-Sheriff-asking-local-officials-13763657.php">downplaying and denying the presence of human trafficking</a> in Fort Bend, even as other <a href = "https://digital.olivesoftware.com/olive/ODN/HoustonChronicle/shared/ShowArticle.aspx?doc=HHC%2F2020%2F01%2F05&entity=Ar00303&sk=89BAF31E&mode=text#">Houston-area law enforcement officials</a> address it as a serious issue. 
+        I’ve even gone as far as to <a href = "https://www.texastribune.org/2020/07/01/tx-22-runoff-troy-nehls-kathaleen-wall/">blame the family of a sex trafficking victim for my own negligence</a>. 
+        And if that isn’t enough to convince you that I don’t care about our trafficking problem, <a href = "https://www.khou.com/video/news/local/video/fort-bend-county-sheriff-troy-nehls-did-not-attend-human-trafficking-meeting-ahead-of-runoff/285-6a7383c6-cbf7-44f5-bde6-c8fcb4ec2258">I skipped out on a human trafficking community roundtable to go campaign</a>.</p>
+      <br>
+      <h2>Healthcare</h2>
+      <p>I’m perfectly comfortable with dismantling the Affordable Care Act during a pandemic, <a href = "https://www.americanprogress.org/issues/healthcare/news/2020/06/24/486768/health-care-repeal-lawsuit-strip-coverage-23-million-americans/">a move that would strip health insurance from 2 million Texans</a>. 
+        I hope the GOP tax bill—<a href = "https://www.washingtonpost.com/news/wonk/wp/2017/12/15/the-final-gop-tax-bill-is-complete-heres-what-is-in-it/">which the nonpartisan CBO says will increase the uninsured rate and raise health care costs</a>—becomes “<a href = "https://www.youtube.com/watch?v=dyVoahRv-_c">permanent</a>.”</p>
+  </div>
+
+  <div style="clear:both"><br><br></div>
+
+  <section class="image" style="clear:both;background-image:url(assets/veterans.webp)">
+    <div class="text">
+      <h1 style="font-size:70px;color:white;text-align:center;"><span style="color: #db1727">Why</span> I'm Qualified
+      </h1>
+      <section>
+        <br>
+        <p>I’ve skillfully side-stepped Texas’ resign-to-run laws so I could maintain my taxpayer-funded $127,231 annual salary and sheriff’s uniform.</p>
+        <br>
+        <p>I’ve been accused of intentionally misrepresenting donor information and illegally transferring money for my campaign.</p>
+        <br>
+        <p>I’ve destroyed evidence—an act which got me fired from my job as a police officer.</p>
+        <br>
+        <p>I’ve retaliated against employees that don’t support me, stripping them of the police technology they need to do their jobs.</p>
+        <br>
+      </section>
+    </div>
+    <div class="overlay"></div>
+  </section>
+
+  <section class="image" style="background-image:url(assets/energy.webp)">
+    <div class="text">
+      <h1>UPCOMING EVENTS</h1>
+      <br>
+      <p>Join Troy Nehls as he goes literally anywhere but a human trafficking round table!</p>
+    </div>
+    <div class="overlay"></div>
+  </section>
+
+  <section class="image" style="background-image:url(assets/file.gif); text-align: center">
+    <div class="text" style="width:100%;">
+      <h1 style="text-decoration: underline">JOIN THE FIGHT</h1>
+      <br>
+      <a class="donate-button">$50</a>
+      <a class="donate-button">$100</a>
+      <a class="donate-button">$500</a>
+      <a class="donate-button">$1,000</a>
+      <a class="donate-button">$2,800</a>
+      <br>
+      <br>
+
+      <img style="height:150px;width: auto;margin: 0 auto;" src="assets/nehls-white.webp" />
+    </div>
+    <div class="overlay"></div>
+  </section>
+
+  <script>
+    function showPopup(){
+      document.getElementById("popup-text").style.visibility = "visible";
+    }
+
+    function hidePopup(){
+      document.getElementById("popup-text").style.visibility = "hidden";
+    }
+
+    document.addEventListener("click", function(e){
+      if(e.target.id == "popup" || e.target.id == "popup-text") showPopup();
+      else hidePopup();
+    });
+  </script>
+
 </body>
+
+</html>
