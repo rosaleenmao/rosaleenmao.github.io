@@ -1,0 +1,23 @@
+h1 {
+    font-family: sans-serif;
+    color: rgb(14, 77, 14);
+}
+
+h3 {
+    font-family: sans-serif;
+    color:rgb(136, 151, 249);
+    margin-top: 50px;
+}
+
+p{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+body {
+    background-image: url("assets/Background.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
